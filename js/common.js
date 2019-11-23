@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
   $('.hamburger').on('click', function() {
     $('.menu').addClass('menu-active');
     setTimeout(function () {
-      $('.menu-inner').removeClass('menu-inner-hide')
+      $('.menu-inner').removeClass('menu-inner-hide');
     }, 300);
   });
 
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $('.menu-inner').addClass('menu-inner-hide');
     setTimeout(function () {
       $('.menu').removeClass('menu-active');
-    }, 300)
+    }, 300);
   });
 
   let owl = $('.right-side__slider');

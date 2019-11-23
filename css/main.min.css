@@ -4321,9 +4321,9 @@ b, strong {
   left: 0;
   width: 0;
   height: 100%;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: width .5s ease;
+  -o-transition: width .5s ease;
+  transition: width .5s ease;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 10;
@@ -4341,9 +4341,9 @@ b, strong {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  -webkit-transition: all .4s ease;
-  -o-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .main-wrapper .menu-inner-hide {
@@ -4357,17 +4357,38 @@ b, strong {
 
 .main-wrapper .menu-active {
   width: 120%;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: width .5s ease;
+  -o-transition: width .5s ease;
+  transition: width .5s ease;
   padding: 30px 30px;
 }
 
+.main-wrapper .menu.menu-active .menu-header {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.main-wrapper .menu:not(.menu-active) .menu-header {
+  opacity: 0;
+  -webkit-transition-delay: .2s;
+       -o-transition-delay: .2s;
+          transition-delay: .2s;
+  pointer-events: none;
+}
+
 .main-wrapper .menu-header {
+  min-width: 150px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 15;
+  top: 34px;
+  left: 30px;
 }
 
 .main-wrapper .menu-close {
@@ -4396,7 +4417,7 @@ b, strong {
 }
 
 .main-wrapper .menu-body__top {
-  padding-top: 50px;
+  padding-top: 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4498,7 +4519,7 @@ b, strong {
           animation: slideInRight 0.9s ease;
 }
 
-.right-side .owl-item.active .block-wrapper .block:first-child {
+.right-side .owl-item.active .block-wrapper .block:nth-child(1) {
   -webkit-animation: slideInRight 0.3s ease;
           animation: slideInRight 0.3s ease;
 }
@@ -4523,7 +4544,7 @@ b, strong {
           animation: slideOutLeft 0.9s ease;
 }
 
-.right-side .owl-item .block-wrapper .block:first-child {
+.right-side .owl-item .block-wrapper .block:nth-child(1) {
   -webkit-animation: slideOutLeft 0.3s ease;
           animation: slideOutLeft 0.3s ease;
 }
@@ -4534,8 +4555,8 @@ b, strong {
 }
 
 .right-side .owl-item .block-wrapper .block:nth-child(3) {
-  -webkit-animation: slideOutLeft 0.3s ease;
-          animation: slideOutLeft 0.3s ease;
+  -webkit-animation: slideOutLeft 0.9s ease;
+          animation: slideOutLeft 0.9s ease;
 }
 
 .right-side .owl-item .block-wrapper .block:nth-child(4) {

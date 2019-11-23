@@ -257,7 +257,7 @@ b, strong
 		left: 0
 		width: 0
 		height: 100%
-		transition: all .5s ease
+		transition: width .5s ease
 		box-sizing: border-box
 		z-index: 10
 		box-shadow: 10px 0 15px 1px rgba(#000, .15)
@@ -267,7 +267,7 @@ b, strong
 		opacity: 1
 		filter: alpha(opacity=100)
 		transform: translateY(0) 
-		transition: all .4s ease
+		transition: all .5s ease
 	.menu-inner-hide
 		visibility: hidden
 		opacity: 0
@@ -275,10 +275,27 @@ b, strong
 		transform: translateY(5%)
 	.menu-active
 		width: 120%
-		transition: all .5s ease
+		transition: width .5s ease
 		padding: 30px 30px
+	.menu.menu-active
+		.menu-header
+			opacity: 1
+			pointer-events: auto
+	.menu:not(.menu-active)
+		.menu-header
+			opacity: 0
+			transition-delay: .2s;
+			pointer-events: none
 	.menu-header
+		min-width: 150px
 		display: flex
+		white-space: nowrap
+		opacity: 0
+		pointer-events: none
+		position: absolute
+		z-index: 15
+		top: 34px
+		left: 30px
 	.menu-close
 		transform: rotate(180deg)
 		cursor: pointer
@@ -292,7 +309,7 @@ b, strong
 		font-size: 18px
 	.menu-body
 	.menu-body__top
-		padding-top: 50px
+		padding-top: 100px
 		display: flex
 		flex-direction: column
 		flex-wrap: wrap
@@ -362,7 +379,7 @@ b, strong
 			animation: slideInRight 0.9s ease
 		.block-wrapper
 			.block
-				&:first-child
+				&:nth-child(1)
 					animation: slideInRight 0.3s ease
 				&:nth-child(2)
 					animation: slideInRight 1.3s ease
@@ -375,12 +392,12 @@ b, strong
 			animation: slideOutLeft 0.9s ease
 		.block-wrapper
 			.block
-				&:first-child
+				&:nth-child(1)
 					animation: slideOutLeft 0.3s ease
 				&:nth-child(2)
 					animation: slideOutLeft 1.3s ease
 				&:nth-child(3)
-					animation: slideOutLeft 0.3s ease
+					animation: slideOutLeft 0.9s ease
 				&:nth-child(4)
 					animation: slideOutLeft 1.9s ease
 					
