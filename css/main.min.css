@@ -4099,14 +4099,14 @@ b, strong {
 }
 
 .left-side .squares {
-  margin-top: 290px;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  margin-top: 300px;
+  -webkit-transition: all .30s ease;
+  -o-transition: all .30s ease;
+  transition: all .30s ease;
 }
 
 .left-side .squares-active {
-  margin-top: 270px;
+  margin-top: 170px;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
@@ -4114,16 +4114,19 @@ b, strong {
 
 .left-side .squares-green {
   background: #37B1A8;
-  height: 85px;
+  height: 90px;
+  -webkit-transition: height .5s ease;
+  -o-transition: height .5s ease;
+  transition: height .5s ease;
   cursor: pointer;
   position: relative;
 }
 
 .left-side .squares-dark-green {
-  background: #1DA197;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  background: #2B8880;
+  -webkit-transition: all .30s ease;
+  -o-transition: all .30s ease;
+  transition: all .30s ease;
   height: 0;
 }
 
@@ -4133,10 +4136,10 @@ b, strong {
 }
 
 .left-side .squares-box-active {
-  height: 190px;
-  -webkit-transition: height .5s ease;
-  -o-transition: height .5s ease;
-  transition: height .5s ease;
+  height: 165px;
+  -webkit-transition: height .45s ease;
+  -o-transition: height .45s ease;
+  transition: height .45s ease;
   position: relative;
 }
 
@@ -4144,7 +4147,7 @@ b, strong {
   content: '';
   position: absolute;
   border: 10px solid transparent;
-  border-bottom: 12px solid #1DA197;
+  border-bottom: 12px solid #2B8880;
   -webkit-border-radius: 12px;
           border-radius: 12px;
   width: 0;
