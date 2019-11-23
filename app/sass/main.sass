@@ -1,0 +1,534 @@
+@import "_fonts.sass"
+@import "_vars.sass"
+@import "_libs.sass"
+@import "_modules.sass"
+
+*
+	padding: 0
+	margin: 0
+	outline: none
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.normal-satate 
+  transform: skew(-16deg) scale(1) !important
+  opacity: 1 !important
+
+.container
+	width: 1570px
+	
+img
+	image-rendering: -webkit-optimize-contrast 
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-size: 100%
+
+a
+	color: #fff
+	text-decoration: none
+	&:visited, &:active
+		color: inherit
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.4
+
+li
+	list-style: none
+
+.text-center
+	text-align: center
+	
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+	
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+b, strong
+	font-weight: bold
+    
+	
+// Default Styles
+
+
+.page
+	display: flex
+	height: 1000px
+
+
+// LeftSide
+
+.left-side
+	width: 112px
+	margin-right: -1px
+	position: relative
+	box-shadow: 20px 0px 15px -10px rgba(#000, .05)
+	z-index: 11
+	.logo
+		text-align: center
+		padding-top: 35px
+	.rotate-title
+		position: absolute
+		color: #4A4A4A
+		transform: rotate(-90deg)
+		font-weight: 900
+		right: -20px
+		top: 140px
+		width: 155px
+		text-align: center
+		span
+			display: block
+			line-height: 1.2
+			text-transform: uppercase
+			color: #4A4A4A
+			text-shadow: 0px 0px 1px rgba(#000, .9)
+			&:first-child
+				font-size: 33px
+			&:last-child
+				font-size: 11px
+				width: 100%
+				text-transform: lowercase
+	.squares
+		margin-top: 290px
+		transition: all .5s ease
+	.squares-active
+		margin-top: 270px
+		transition: all .5s ease
+	.squares-green
+		background: #37B1A8
+		height: 85px
+		cursor: pointer
+		position: relative
+	.squares-dark-green
+		background: #1DA197
+		transition: all .5s ease
+		height: 0
+	.squares-blue
+		background: #1C5394
+		height: 112px
+	.squares-box-active
+		height: 190px
+		transition: height .5s ease
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			border: 10px solid transparent 
+			border-bottom: 12px solid #1DA197
+			border-radius: 12px
+			width: 0
+			height: 0
+			top: -18px
+			left: 0
+			right: 0
+			margin: 0 auto
+			transition: all .5s ease
+
+
+
+
+
+// LeftSide_
+
+
+// Main
+.main-wrapper
+	position: relative
+	.main
+		overflow: hidden
+		width: 500px
+		position: relative
+		height: 100%
+		&:hover .main-bg
+			transform: scale(1.1)
+			transition: all .3s ease
+		&:hover .main-body
+			padding: 30px 30px 0px 30px
+			transition: all .3s ease
+	.main-bg
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: -1
+		transition: all .5s ease
+	.main-header
+		display: flex
+		padding-top: 28px
+		padding-left: 30px
+		.nav
+			display: flex
+			justify-content: space-between
+			width: 100%
+			padding: 6px 40px 0px 20px
+			li
+				color: #ffffff
+				font-size: 17px
+				cursor: pointer
+	.hamburger
+		cursor: pointer
+	.hamburger-inner
+		width: 27px
+		height: 2px
+		background: #fff
+		position: relative
+		margin-top: 20px
+		cursor: pointer
+		&:after, &:before
+			content: ''
+			width: 27px
+			height: 2px
+			background: #fff
+			position: absolute
+		&:after
+			top: -8px
+		&:before
+			bottom: -8px
+
+	.main-body
+		padding: 38px 30px 0px 30px
+		transition: all .3s ease
+	.main-title
+		span
+			display: block
+			color: #fff
+			&:first-child
+				font-size: 24px
+				font-weight: 300
+			&:nth-child(2)
+				font-size: 65px
+				font-weight: 500
+				line-height: 1
+			&:nth-child(3)
+				margin-top: 40px
+				font-size: 14px
+				width: 80%
+			&:last-child
+
+	.connect
+		color: #ffffff
+		font-weight: 500
+		display: flex
+		align-items: center
+		margin-top: 23px
+		padding-left: 6px
+		font-size: 14.5px
+		text-transform: uppercase
+	.arrow
+		background: #5285B2
+		width: 33px
+		height: 33px
+		border-radius: 10em
+		text-align: center
+		line-height: 2.2
+		margin-left: 15px
+		cursor: pointer
+		img
+			width: 16px
+
+	.menu
+		background: #CCCCCC
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 100%
+		transition: all .5s ease
+		box-sizing: border-box
+		z-index: 10
+		box-shadow: 10px 0 15px 1px rgba(#000, .15)
+		a
+			color: #000
+	.menu-inner
+		opacity: 1
+		filter: alpha(opacity=100)
+		transform: translateY(0) 
+		transition: all .4s ease
+	.menu-inner-hide
+		visibility: hidden
+		opacity: 0
+		filter: alpha(opacity=0)
+		transform: translateY(5%)
+	.menu-active
+		width: 120%
+		transition: all .5s ease
+		padding: 30px 30px
+	.menu-header
+		display: flex
+	.menu-close
+		transform: rotate(180deg)
+		cursor: pointer
+		display: flex
+		align-items: center
+		img
+			width: 25px
+	.menu-title
+		margin-left: 20px
+		color: #fff
+		font-size: 18px
+	.menu-body
+	.menu-body__top
+		padding-top: 50px
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		height: 160px
+		li
+			margin: 5px 0px
+	.menu-body__bottom
+		padding-top: 50px
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		height: 160px
+		li
+			margin: 5px 0px
+	.menu-footer
+	.social-vk
+		background: #426B99
+		padding: 5px
+		width: 180px
+		color: #fff
+		position: relative
+		display: flex
+		justify-content: space-between
+		cursor: pointer
+		margin-top: 25px
+		i
+			position: absolute
+			font-size: 24px
+			left: 20px
+			top: 4px
+		span
+			&:nth-child(2)
+				margin-left: 45px
+				text-transform: uppercase
+				font-size: 13px
+				font-weight: 600
+			&:last-child
+				margin-right: 9px
+				font-size: 13px
+
+  
+
+
+// Main_
+
+
+// RightSide
+
+.right-side
+	margin-left: -2px
+	background: #fff
+	width: 872px
+	.right-side__slider 
+	.owl-carousel
+		.owl-stage-outer
+		.owl-item
+			overflow: hidden
+			img
+				display: block
+				width: 100%
+			.block-wrapper
+				.block
+					&:nth-child(3), &:nth-child(4)
+						margin-bottom: 0
+	.owl-item.active
+		.block-large
+			animation: slideInRight 0.9s ease
+		.block-wrapper
+			.block
+				&:first-child
+					animation: slideInRight 0.3s ease
+				&:nth-child(2)
+					animation: slideInRight 1.3s ease
+				&:nth-child(3)
+					animation: slideInRight 0.3s ease
+				&:nth-child(4)
+					animation: slideInRight 1.6s ease
+	.owl-item
+		.block-large
+			animation: slideOutLeft 0.9s ease
+		.block-wrapper
+			.block
+				&:first-child
+					animation: slideOutLeft 0.3s ease
+				&:nth-child(2)
+					animation: slideOutLeft 1.3s ease
+				&:nth-child(3)
+					animation: slideOutLeft 0.3s ease
+				&:nth-child(4)
+					animation: slideOutLeft 1.9s ease
+					
+	// .owl-active
+	// 	.block-large
+	// 		animation: slideOutLeft 0.9s ease
+	// 	.block-wrapper
+	// 		.block
+	// 			&:first-child
+	// 				animation: slideOutLeft 0.3s ease
+	// 			&:nth-child(2)
+	// 				animation: slideOutLeft 1.3s ease
+	// 			&:nth-child(3)
+	// 				animation: slideOutLeft 0.3s ease
+	// 			&:nth-child(4)
+	// 				animation: slideOutLeft 1.9s ease
+	.item
+		box-sizing: border-box
+		padding: 17px
+	.block-wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.block
+		width: 410px
+		height: 410px
+		background: grey
+		margin-bottom: 15px
+		&.blue
+			background: #5F83AD
+		&.beige
+			background: #E5E2DC
+		&.gold
+			background: #F3C22C
+		&.light-green
+			background: #F4F7E5
+		&.dark-green
+			background: #666841
+	.block-hover
+		overflow: hidden
+		transition: all .3s ease
+		position: relative
+		img
+			transition: all .3s ease
+		&:hover img
+			transform: scale(1.1)
+			transition: all .3s ease
+		&:hover:after
+			height: 165px
+			transition: all .3s ease
+		&:after
+			content: ''
+			background: #ECECEC
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 150px
+			transition: all .3s ease
+			
+	.block-large
+		width: 837px
+		height: 410px
+		background: #E5E2DC
+		padding: 20px
+		box-sizing: border-box
+	.block-large-inner
+		width: 400px
+		height: 250px
+		background: #fff
+		border-radius: 4px
+		position: relative
+		&:after
+			content: ''
+			height: 2px
+			width: 100%
+			background: #D9D9D9
+			position: absolute
+			top: 50px
+
+
+		
+
+	.owl-nav
+		position: absolute
+		top: 45.3%
+		right: -67px
+		width: 60px
+		height: 60px
+		.owl-prev
+			display: none
+		button.owl-next
+			background: #ECECEC 
+			border-radius: 10em
+			width: 60px
+			height: 60px
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			margin: auto
+			&:hover
+				background: #ECECEC
+			&:active
+				width: 55px
+				height: 55px
+
+	.right-side__footer
+		padding: 0px 25px
+	.right-side__footer-top
+		display: flex
+		padding-bottom: 22px
+		border-bottom: 1px solid #D8D8D8
+		padding-right: 70px
+		padding-top: 6px
+	.footer-top-el
+		line-height: 1.5
+		span
+			display: inline-block
+			font-size: 15px
+			font-weight: 300
+	.tel
+		margin-right: 77px 
+		span
+			margin-left: 9px
+	.ques
+		margin-right: 73px 
+		img
+			margin-top: 2px
+			margin-right: 4px
+	.cabinet
+		margin-right: 64px 
+		img
+			margin-right: 5px
+			margin-top: 6px
+	.search
+		margin-right: 10px 
+		img
+			margin-right: 10px
+
+	.right-side__footer-bottom
+		padding-top: 18px
+		padding-left: 3px
+		font-size: 14px
+		font-weight: 300
+		span
+			margin-right: 5px
+
+// RightSide_
+	
+@import "_media"
